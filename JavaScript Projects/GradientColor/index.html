@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(92, 145, 229), rgb(152, 63, 198))
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <button id="myButton">#051937</button>
+            <button id="myButton2">#008793</button>
+        </div>
+        <h2>copy your code here</h2>
+        <div id="text">
+            background-image:linear-gradient(to right, rgb(92,145,229), rgb(152,63, 198))
+        </div>
+    </section>
+
+
+    <script>
+
+
+        let btn1 = document.getElementById("myButton")
+        let btn2 = document.getElementById("myButton2")
+        let rgb1 = "#000"
+        let rgb2 = "#fff"
+        let text = document.getElementById("text")
+
+        const hexValues = () => {
+            let myHexValues = "adcfr12344As5678"
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+
+                color = color + myHexValues[Math.floor(Math.random() * myHexValues.length)]
+
+            }
+            return color;
+
+        }
+
+
+
+
+
+
+        const handleButton = () => {
+
+            rgb1 = hexValues();
+            btn1.innerText = rgb1
+            text.innerHTML = `linear-gradient(to right,${rgb1},${rgb2})`
+            document.body.style.backgroundImage = `linear-gradient(to right,${rgb1},${rgb2})`
+
+        }
+
+        const handleButton2 = () => {
+            rgb2 = hexValues();
+            btn2.innerText = rgb2
+            text.innerHTML = `linear-gradient(to right,${rgb1},${rgb2})`
+            document.body.style.backgroundImage = `linear-gradient(to right,${rgb1},${rgb2})`
+
+        }
+
+
+        btn1.addEventListener("click", handleButton)
+        btn2.addEventListener("click", handleButton2)
+    </script>
+</body>
+
+</html>
