@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-.border-overlay{
-    background-color: rgba(0,0,0,0.7);
-}
